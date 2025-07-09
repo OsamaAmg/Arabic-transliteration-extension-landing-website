@@ -1,0 +1,122 @@
+.showcase {
+    border-radius: 15px;
+   /*border: 0.3rem solid #393e41;*/
+    width: 90%;
+    background-color: #f6f7eb;
+    padding: 1rem 0;
+    overflow: hidden;
+    margin: 1rem auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+.showcase-content {
+    text-align: center;
+}
+
+.showcase-title {
+    color: #393e41;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.showcase-subtitle {
+    color: #393e41;
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+}
+
+.showcase-animation {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.websites-container {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 15s linear infinite;
+    width: fit-content;
+}
+
+.website-item {
+    flex: 0 0 auto;
+    margin: 1rem 2rem;
+}
+
+.website-logo {
+    width: 7.5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0.5rem;
+}
+
+.website-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.website-logo:hover {
+    transform: translateY(-0.3125rem);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .showcase-title {
+        font-size: 2rem;
+    }
+    
+    .showcase-subtitle {
+        font-size: 1rem;
+    }
+    
+    .website-logo {
+        width: 6.25rem;
+        height: 4.375rem;
+        font-size: 0.8rem;
+    }
+    
+    .websites-container {
+        animation-duration: 12s;
+    }
+}
+
+@media (max-width: 480px) {
+    .showcase {
+        padding: 2rem 0;
+    }
+    
+    .showcase-content {
+        margin-bottom: 2rem;
+    }
+    
+    .showcase-title {
+        font-size: 1.5rem;
+    }
+    
+    .website-logo {
+        width: 5rem;
+        height: 3.75rem;
+        font-size: 0.7rem;
+    }
+}
